@@ -1,9 +1,13 @@
+import { Route } from 'react-router-dom'
 import './App.css'
+import ChatPage from './Chat/ChatPage'
+import Form from './Form/Form'
 
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <Route path='/' component={Form} exact/>
+      <Route path='/chat' component={ChatPage}/>
     </>
   )
 }
