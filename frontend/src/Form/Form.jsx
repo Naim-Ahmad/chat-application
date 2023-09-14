@@ -8,16 +8,18 @@ export default function Form() {
     setActive(event.target.innerText)
   }
   return (
-    <div>
-        <div className="tabs tabs-boxed" onClick={handleTab}>
-          <a className={`tab ${active === 'Login' ? 'tab-active' : ''}`}>Login</a> 
-          <a className={`tab ${active === 'SignUp' ? 'tab-active' : ''}`}>SignUp</a> 
-      </div>
-      <div>
-        {
-          active === 'Login' ? <Login/> : <SignUp/>
-        }
-      </div>
+    <div className="flex justify-center h-[80vh] mt-20">
+        <div className="">
+            <div className="tabs tabs-boxed mb-6" onClick={handleTab}>
+              <a className={`tab ${active === 'Login' ? 'tab-active' : ''} flex-1`}>Login</a> 
+              <a className={`tab ${active === 'SignUp' ? 'tab-active' : ''} flex-1`}>SignUp</a> 
+            </div>
+          <div className="">
+            {
+              active === 'Login' ? <Login /> : <SignUp/>
+            }
+          </div>
+       </div>
     </div>
   )
 }
